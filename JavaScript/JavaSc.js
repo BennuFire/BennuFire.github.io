@@ -8,6 +8,4 @@ $(document).ready(function() {
     $(this).removeClass("highlight");
   });
   
-
-  });
 });
