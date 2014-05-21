@@ -8,4 +8,18 @@ $(document).ready(function() {
     $(this).removeClass("highlight");
   });
   
+    $('button').on('click', function(){
+    var tour = $(this).parent();
+    var location = tour.data('location');
+    var resultDiv = tour.find('.results').empty();
+    Vacation.getPrice(location).done(function(priceResult){
+      $('<p>$'+priceResult+'</p>').appendTo(resultDiv);
+    });
+
+    Photo.getPhoto(location).done(function(photoResult){
+      $('<img />').attr('src', photoResult).appendTo(resultDiv);
+    });
+  });
+  
+  
 });
