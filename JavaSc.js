@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $(".tour").on("mouseenter", function() {
+	alert("wee");
     $(this).addClass("highlight");
     $(this).find(".per-night").animate({"top": "-14px","opacity": "1"}, "fast");
   });
