@@ -8,4 +8,8 @@ $(document).ready(function() {
     $(this).find(".per-night").animate({"top": "0px","opacity": "0"}, "fast");
     $(this).removeClass("highlight");
   });
+  
+   $("#ally").on("mouseenter", function() {
+	alert("wee");
+  });
 });
